@@ -22,7 +22,7 @@ export default class Customers extends Component {
   getCustomerData() {
     axios.get('assets/samplejson/customerlist.json').then(response => {
       this.setState({customerList: response})
-    })
+    }).catch(err => {console.log(err)})
   };
 
   render() {
